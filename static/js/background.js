@@ -20,3 +20,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
     types: ['stylesheet']
 }, ['requestHeaders','blocking'])
 
+chrome.browserAction.onClicked.addListener(function()
+{
+    chrome.tabs.create({ url: "index.html" });
+});
+
